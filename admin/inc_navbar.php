@@ -5,25 +5,6 @@
         </button>
         
         <div class="ms-auto d-flex align-items-center">
-            <!-- Notifications -->
-            <div class="dropdown me-3">
-                <a class="nav-link position-relative" href="#" role="button" 
-                   data-bs-toggle="dropdown" aria-expanded="false">
-                    <i class="bi bi-bell fs-5"></i>
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                        3
-                        <span class="visually-hidden">notifikasi baru</span>
-                    </span>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><h6 class="dropdown-header">Notifikasi</h6></li>
-                    <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="#">
-                        <small class="text-muted">Belum ada notifikasi</small>
-                    </a></li>
-                </ul>
-            </div>
-
             <!-- User Profile -->
             <div class="dropdown">
                 <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" 

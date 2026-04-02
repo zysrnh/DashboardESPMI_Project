@@ -18,9 +18,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'semester_aktif',
         'batas_skor_baik',
         'batas_skor_cukup',
-        'batas_skor_kurang',
-        'warna_sidebar',
-        'warna_aksen'
+        'batas_skor_kurang'
     ];
     
     // Checkbox settings (will be 0 if not checked)

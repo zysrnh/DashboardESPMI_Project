@@ -86,11 +86,6 @@ foreach ($defaults as $key => $value) {
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tampilan">
-                            <i class="bi bi-palette"></i> Tampilan
-                        </button>
-                    </li>
-                    <li class="nav-item">
                         <button class="nav-link" data-bs-toggle="tab" data-bs-target="#akademik">
                             <i class="bi bi-calendar-check"></i> Akademik
                         </button>
@@ -167,43 +162,6 @@ foreach ($defaults as $key => $value) {
                                             <input type="file" name="logo_institusi" class="form-control" accept="image/*">
                                             <small class="text-muted">Format: JPG, PNG, GIF. Maksimal 2MB</small>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Tab Tampilan -->
-                        <div class="tab-pane fade" id="tampilan">
-                            <div class="card border-0 shadow-sm mb-4">
-                                <div class="card-header bg-white">
-                                    <h5 class="mb-0">Personalisasi Tampilan</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-md-6 mb-3">
-                                            <label class="form-label d-block">Warna Utama (Sidebar)</label>
-                                            <div class="d-flex align-items-center">
-                                                <input type="color" name="warna_sidebar" class="form-control form-control-color me-3" 
-                                                       value="<?php echo $settings['warna_sidebar']; ?>" id="sidebarColorPicker">
-                                                <input type="text" class="form-control" value="<?php echo $settings['warna_sidebar']; ?>" 
-                                                       id="sidebarColorText" oninput="document.getElementById('sidebarColorPicker').value = this.value">
-                                            </div>
-                                            <small class="text-muted">Gunakan kode HEX untuk kustomisasi warna sidebar.</small>
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label class="form-label d-block">Warna Aksen (Tombol & Aktif)</label>
-                                            <div class="d-flex align-items-center">
-                                                <input type="color" name="warna_aksen" class="form-control form-control-color me-3" 
-                                                       value="<?php echo $settings['warna_aksen']; ?>" id="accentColorPicker">
-                                                <input type="text" class="form-control" value="<?php echo $settings['warna_aksen']; ?>" 
-                                                       id="accentColorText" oninput="document.getElementById('accentColorPicker').value = this.value">
-                                            </div>
-                                            <small class="text-muted">Warna untuk tombol, link aktif, dan elemen interaktif lainnya.</small>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="alert alert-light border mt-2">
-                                        <strong>Tips:</strong> Gunakan warna yang kontras untuk kenyamanan navigasi.
                                     </div>
                                 </div>
                             </div>
@@ -385,25 +343,5 @@ foreach ($defaults as $key => $value) {
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../assets/js/sidebar-toggle.js"></script>
-    <script>
-        // Sync color pickers and text inputs
-        document.getElementById('sidebarColorPicker').addEventListener('input', function() {
-            document.getElementById('sidebarColorText').value = this.value;
-        });
-        document.getElementById('accentColorPicker').addEventListener('input', function() {
-            document.getElementById('accentColorText').value = this.value;
-        });
-        
-        document.getElementById('sidebarColorText').addEventListener('input', function() {
-            if(/^#[0-9A-F]{6}$/i.test(this.value)) {
-                document.getElementById('sidebarColorPicker').value = this.value;
-            }
-        });
-        document.getElementById('accentColorText').addEventListener('input', function() {
-            if(/^#[0-9A-F]{6}$/i.test(this.value)) {
-                document.getElementById('accentColorPicker').value = this.value;
-            }
-        });
-    </script>
 </body>
 </html>

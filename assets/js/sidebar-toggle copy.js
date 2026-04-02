@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlay.classList.add('active');
         
         // Prevent body scroll on mobile
-        if (window.innerWidth <= 992) {
+        if (window.innerWidth <= 768) {
             body.classList.add('sidebar-open');
         }
     }
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const menuItems = document.querySelectorAll('.sidebar .menu-item a');
     menuItems.forEach(item => {
         item.addEventListener('click', function() {
-            if (window.innerWidth <= 992) {
+            if (window.innerWidth <= 768) {
                 closeSidebar();
             }
         });
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle window resize
     window.addEventListener('resize', function() {
-        if (window.innerWidth > 992) {
+        if (window.innerWidth > 768) {
             closeSidebar();
         }
     });

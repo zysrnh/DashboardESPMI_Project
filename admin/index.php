@@ -74,17 +74,19 @@ $recent_logs = mysqli_query($koneksi, $query_log);
                 <div class="row g-4 mb-4">
                     <!-- Total Users -->
                     <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card border-0 shadow-sm">
+                        <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h6 class="text-muted mb-2">Total Pengguna</h6>
-                                        <h3 class="mb-0"><?php echo array_sum($stats_user); ?></h3>
-                                        <small class="text-success">
-                                            <i class="bi bi-arrow-up"></i> Aktif
-                                        </small>
+                                        <h6 class="text-muted fw-normal mb-2">Total Pengguna</h6>
+                                        <h3 class="fw-bold mb-0"><?php echo array_sum($stats_user); ?></h3>
+                                        <div class="mt-2">
+                                            <span class="badge bg-success-subtle text-success px-2 py-1" style="font-size: 0.7rem;">
+                                                <i class="bi bi-person-check-fill me-1"></i> Aktif
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="stat-icon bg-primary">
+                                    <div class="stat-icon bg-primary shadow-sm">
                                         <i class="bi bi-people"></i>
                                     </div>
                                 </div>
@@ -94,17 +96,19 @@ $recent_logs = mysqli_query($koneksi, $query_log);
 
                     <!-- Total Standar -->
                     <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card border-0 shadow-sm">
+                        <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h6 class="text-muted mb-2">Total Standar</h6>
-                                        <h3 class="mb-0"><?php echo $total_standar; ?></h3>
-                                        <small class="text-info">
-                                            <i class="bi bi-check-circle"></i> Kategori
-                                        </small>
+                                        <h6 class="text-muted fw-normal mb-2">Total Standar</h6>
+                                        <h3 class="fw-bold mb-0"><?php echo $total_standar; ?></h3>
+                                        <div class="mt-2">
+                                            <span class="badge bg-info-subtle text-info px-2 py-1" style="font-size: 0.7rem;">
+                                                <i class="bi bi-check-circle-fill me-1"></i> Kategori
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="stat-icon bg-success">
+                                    <div class="stat-icon bg-info shadow-sm text-white">
                                         <i class="bi bi-clipboard-check"></i>
                                     </div>
                                 </div>
@@ -114,17 +118,19 @@ $recent_logs = mysqli_query($koneksi, $query_log);
 
                     <!-- Total Indikator -->
                     <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card border-0 shadow-sm">
+                        <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h6 class="text-muted mb-2">Total Indikator</h6>
-                                        <h3 class="mb-0"><?php echo $total_indikator; ?></h3>
-                                        <small class="text-warning">
-                                            <i class="bi bi-list-check"></i> Aspek
-                                        </small>
+                                        <h6 class="text-muted fw-normal mb-2">Total Indikator</h6>
+                                        <h3 class="fw-bold mb-0"><?php echo $total_indikator; ?></h3>
+                                        <div class="mt-2">
+                                            <span class="badge bg-warning-subtle text-warning px-2 py-1" style="font-size: 0.7rem;">
+                                                <i class="bi bi-list-stars me-1"></i> Aspek
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="stat-icon bg-warning">
+                                    <div class="stat-icon bg-warning shadow-sm text-white">
                                         <i class="bi bi-list-task"></i>
                                     </div>
                                 </div>
@@ -134,17 +140,19 @@ $recent_logs = mysqli_query($koneksi, $query_log);
 
                     <!-- Total Unit -->
                     <div class="col-xl-3 col-md-6">
-                        <div class="card stat-card border-0 shadow-sm">
+                        <div class="card border-0">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <h6 class="text-muted mb-2">Unit Audit</h6>
-                                        <h3 class="mb-0"><?php echo $total_unit; ?></h3>
-                                        <small class="text-danger">
-                                            <i class="bi bi-building"></i> Fakultas/Prodi
-                                        </small>
+                                        <h6 class="text-muted fw-normal mb-2">Unit Audit</h6>
+                                        <h3 class="fw-bold mb-0"><?php echo $total_unit; ?></h3>
+                                        <div class="mt-2">
+                                            <span class="badge bg-danger-subtle text-danger px-2 py-1" style="font-size: 0.7rem;">
+                                                <i class="bi bi-building-fill me-1"></i> Fakultas/Prodi
+                                            </span>
+                                        </div>
                                     </div>
-                                    <div class="stat-icon bg-danger">
+                                    <div class="stat-icon bg-danger shadow-sm text-white">
                                         <i class="bi bi-diagram-3"></i>
                                     </div>
                                 </div>
@@ -156,46 +164,51 @@ $recent_logs = mysqli_query($koneksi, $query_log);
                 <!-- Status Audit -->
                 <div class="row g-4 mb-4">
                     <div class="col-lg-8">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-white border-bottom">
-                                <h5 class="mb-0"><i class="bi bi-calendar-event"></i> Audit Terbaru</h5>
+                        <div class="card border-0">
+                            <div class="card-header bg-white py-3 border-0">
+                                <h5 class="mb-0 fw-bold"><i class="bi bi-calendar-event me-2"></i> Audit Terbaru</h5>
                             </div>
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table table-hover">
-                                        <thead>
+                                    <table class="table table-hover align-middle">
+                                        <thead class="table-light">
                                             <tr>
-                                                <th>Kode</th>
-                                                <th>Unit</th>
-                                                <th>Ketua Auditor</th>
-                                                <th>Periode</th>
-                                                <th>Status</th>
-                                                <th>Aksi</th>
+                                                <th class="border-0">Kode</th>
+                                                <th class="border-0">Unit</th>
+                                                <th class="border-0">Auditor</th>
+                                                <th class="border-0">Periode</th>
+                                                <th class="border-0">Status</th>
+                                                <th class="border-0 text-center">Aksi</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php while ($audit = mysqli_fetch_assoc($recent_audits)): ?>
                                             <tr>
-                                                <td><strong><?php echo $audit['kode_audit']; ?></strong></td>
+                                                <td class="fw-semibold text-primary"><?php echo $audit['kode_audit']; ?></td>
                                                 <td><?php echo $audit['nama_unit']; ?></td>
-                                                <td><?php echo $audit['ketua']; ?></td>
-                                                <td><?php echo $audit['tahun_akademik'] . ' - ' . ucfirst($audit['semester']); ?></td>
+                                                <td>
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($audit['ketua']); ?>&background=random&size=24" class="rounded-circle me-2">
+                                                        <span><?php echo $audit['ketua']; ?></span>
+                                                    </div>
+                                                </td>
+                                                <td class="small"><?php echo $audit['tahun_akademik']; ?></td>
                                                 <td>
                                                     <?php
                                                     $badge_class = [
-                                                        'dijadwalkan' => 'primary',
-                                                        'berlangsung' => 'warning',
-                                                        'selesai' => 'success',
-                                                        'dibatalkan' => 'danger'
+                                                        'dijadwalkan' => 'bg-primary-subtle text-primary',
+                                                        'berlangsung' => 'bg-warning-subtle text-dark',
+                                                        'selesai' => 'bg-success-subtle text-success',
+                                                        'dibatalkan' => 'bg-danger-subtle text-danger'
                                                     ];
                                                     ?>
-                                                    <span class="badge bg-<?php echo $badge_class[$audit['status']]; ?>">
+                                                    <span class="badge <?php echo $badge_class[$audit['status']]; ?> px-2 py-1">
                                                         <?php echo ucfirst($audit['status']); ?>
                                                     </span>
                                                 </td>
-                                                <td>
-                                                    <a href="jadwal_detail.php?id=<?php echo $audit['id']; ?>" class="btn btn-sm btn-outline-primary">
-                                                        <i class="bi bi-eye"></i>
+                                                <td class="text-center">
+                                                    <a href="jadwal_detail.php?id=<?php echo $audit['id']; ?>" class="btn btn-sm btn-icon btn-light rounded-pill">
+                                                        <i class="bi bi-arrow-right"></i>
                                                     </a>
                                                 </td>
                                             </tr>
@@ -208,28 +221,40 @@ $recent_logs = mysqli_query($koneksi, $query_log);
                     </div>
 
                     <div class="col-lg-4">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-white border-bottom">
-                                <h5 class="mb-0"><i class="bi bi-pie-chart"></i> Statistik Audit</h5>
+                        <div class="card border-0">
+                            <div class="card-header bg-white py-3 border-0">
+                                <h5 class="mb-0 fw-bold"><i class="bi bi-pie-chart me-2"></i> Statistik Audit</h5>
                             </div>
                             <div class="card-body">
-                                <canvas id="auditChart"></canvas>
-                                <div class="mt-3">
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span><i class="bi bi-circle-fill text-primary"></i> Dijadwalkan</span>
-                                        <strong><?php echo $stats_audit['dijadwalkan'] ?? 0; ?></strong>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span><i class="bi bi-circle-fill text-warning"></i> Berlangsung</span>
-                                        <strong><?php echo $stats_audit['berlangsung'] ?? 0; ?></strong>
-                                    </div>
-                                    <div class="d-flex justify-content-between mb-2">
-                                        <span><i class="bi bi-circle-fill text-success"></i> Selesai</span>
-                                        <strong><?php echo $stats_audit['selesai'] ?? 0; ?></strong>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <span><i class="bi bi-circle-fill text-danger"></i> Dibatalkan</span>
-                                        <strong><?php echo $stats_audit['dibatalkan'] ?? 0; ?></strong>
+                                <div style="height: 220px; position: relative;">
+                                    <canvas id="auditChart"></canvas>
+                                </div>
+                                <div class="mt-4">
+                                    <div class="row g-2">
+                                        <div class="col-6">
+                                            <div class="p-2 border rounded-3 bg-light-subtle">
+                                                <small class="text-muted d-block mb-1">Dijadwalkan</small>
+                                                <h6 class="mb-0 fw-bold text-primary"><?php echo $stats_audit['dijadwalkan'] ?? 0; ?></h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-2 border rounded-3 bg-light-subtle">
+                                                <small class="text-muted d-block mb-1">Berlangsung</small>
+                                                <h6 class="mb-0 fw-bold text-warning"><?php echo $stats_audit['berlangsung'] ?? 0; ?></h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-2 border rounded-3 bg-light-subtle">
+                                                <small class="text-muted d-block mb-1">Selesai</small>
+                                                <h6 class="mb-0 fw-bold text-success"><?php echo $stats_audit['selesai'] ?? 0; ?></h6>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="p-2 border rounded-3 bg-light-subtle">
+                                                <small class="text-muted d-block mb-1">Dibatalkan</small>
+                                                <h6 class="mb-0 fw-bold text-danger"><?php echo $stats_audit['dibatalkan'] ?? 0; ?></h6>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -240,36 +265,34 @@ $recent_logs = mysqli_query($koneksi, $query_log);
                 <!-- Log Aktivitas -->
                 <div class="row">
                     <div class="col-12">
-                        <div class="card border-0 shadow-sm">
-                            <div class="card-header bg-white border-bottom">
-                                <h5 class="mb-0"><i class="bi bi-clock-history"></i> Aktivitas Terbaru</h5>
+                        <div class="card border-0">
+                            <div class="card-header bg-white py-3 border-0">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <h5 class="mb-0 fw-bold"><i class="bi bi-clock-history me-2"></i> Aktivitas Terbaru</h5>
+                                    <a href="log.php" class="btn btn-sm btn-light text-primary fw-semibold">Lihat Semua</a>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <div class="activity-timeline">
+                            <div class="card-body px-0 py-0">
+                                <div class="activity-timeline px-4 py-3">
                                     <?php while ($log = mysqli_fetch_assoc($recent_logs)): ?>
-                                    <div class="activity-item">
-                                        <div class="activity-icon bg-primary">
-                                            <i class="bi bi-person"></i>
+                                    <div class="activity-item d-flex mb-4">
+                                        <div class="me-3">
+                                            <img src="https://ui-avatars.com/api/?name=<?php echo urlencode($log['nama_lengkap']); ?>&background=3b82f6&color=fff&size=40" class="rounded-circle shadow-sm">
                                         </div>
-                                        <div class="activity-content">
-                                            <div class="d-flex justify-content-between">
-                                                <h6 class="mb-0"><?php echo $log['nama_lengkap']; ?></h6>
-                                                <small class="text-muted">
+                                        <div class="activity-content flex-grow-1 border-bottom pb-3">
+                                            <div class="d-flex justify-content-between align-items-center mb-1">
+                                                <h6 class="mb-0 fw-bold"><?php echo $log['nama_lengkap']; ?></h6>
+                                                <small class="text-muted bg-light px-2 py-1 rounded">
                                                     <?php 
                                                     $time_diff = time() - strtotime($log['created_at']);
-                                                    if ($time_diff < 60) {
-                                                        echo $time_diff . ' detik lalu';
-                                                    } elseif ($time_diff < 3600) {
-                                                        echo floor($time_diff / 60) . ' menit lalu';
-                                                    } elseif ($time_diff < 86400) {
-                                                        echo floor($time_diff / 3600) . ' jam lalu';
-                                                    } else {
-                                                        echo floor($time_diff / 86400) . ' hari lalu';
-                                                    }
+                                                    if ($time_diff < 60) echo $time_diff . ' detik lalu';
+                                                    elseif ($time_diff < 3600) echo floor($time_diff / 60) . ' menit lalu';
+                                                    elseif ($time_diff < 86400) echo floor($time_diff / 3600) . ' jam lalu';
+                                                    else echo floor($time_diff / 86400) . ' hari lalu';
                                                     ?>
                                                 </small>
                                             </div>
-                                            <p class="mb-0 text-muted"><?php echo $log['aktivitas']; ?></p>
+                                            <p class="mb-0 text-secondary" style="font-size: 0.9rem;"><?php echo $log['aktivitas']; ?></p>
                                         </div>
                                     </div>
                                     <?php endwhile; ?>
@@ -278,6 +301,7 @@ $recent_logs = mysqli_query($koneksi, $query_log);
                         </div>
                     </div>
                 </div>
+
 
             </div>
         </div>
@@ -304,16 +328,19 @@ $recent_logs = mysqli_query($koneksi, $query_log);
                         <?php echo $stats_audit['dibatalkan'] ?? 0; ?>
                     ],
                     backgroundColor: [
-                        'rgba(13, 110, 253, 0.8)',
-                        'rgba(255, 193, 7, 0.8)',
-                        'rgba(25, 135, 84, 0.8)',
-                        'rgba(220, 53, 69, 0.8)'
-                    ]
+                        '#3b82f6', // primary (blue)
+                        '#f59e0b', // warning (amber)
+                        '#10b981', // success (emerald)
+                        '#ef4444'  // danger (rose)
+                    ],
+                    borderWidth: 0,
+                    hoverOffset: 4
                 }]
             },
             options: {
                 responsive: true,
-                maintainAspectRatio: true,
+                maintainAspectRatio: false,
+                cutout: '75%',
                 plugins: {
                     legend: {
                         display: false
